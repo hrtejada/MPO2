@@ -7,10 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
+  <jsp:include page="partials/header.jsp" />
   <body>
-  $END$
+  <%= "Hello From Java! Whoop whoop! "%>
   </body>
 </html>
