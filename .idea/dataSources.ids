@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - cs4311team2sp16@earth.cs.utep.edu" uuid="19d57577-952b-4a53-a6a7-9b801ee64255">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+    <schema name="" catalog="cs4311team2sp16"/>
+    <table name="Organization" schema="" catalog="cs4311team2sp16" type="TABLE">
+      <column name="Id_Organization" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Organization_Name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Organization_Type_Id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Contact_Person_First_Name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Contact_Person_Last_Name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Contact_Person_Middle_Initial" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Contact_Person_Position_Title" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Department_Contact_Number" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Department_Name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Work_Contact_Number" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Id_Organization"/>
+      <foreign-key name="Org_Type" columns="Organization_Type_Id" ref-table="Organization_Type" ref-schema="" ref-catalog="cs4311team2sp16" ref-columns="id_Organization" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="Organization_Name_UNIQUE" unique="true" columns="Organization_Name"/>
+      <index name="Organization_Type" unique="false" columns="Organization_Type_Id"/>
+    </table>
+    <table name="Organization_Type" schema="" catalog="cs4311team2sp16" type="TABLE">
+      <column name="id_Organization" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Organization_Type" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id_Organization"/>
+    </table>
+    <table name="Project" schema="" catalog="cs4311team2sp16" type="TABLE">
+      <column name="id_Project" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Project_Name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="Limit _From" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Limit_To" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Scope_of_Work" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="Remarks" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="Funded_Project_Type" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Federal_Fiscal_Year" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Network_Year" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="DOT_District" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="County" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="City" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Area" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="State_System_Road" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Capacity_Project" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Number_of_Existing_Lanes" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Noumber_of_Projected_Lanes" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Number_of_Miles" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Highway_Name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Project_Type" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Transit_Information" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="Air_VOC_Analysis_VOC" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="Air_VOC_Analysis_NOC" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="Air_VOC_Analysis_CO" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id_Project"/>
+    </table>
+    <table name="Proposed_Project" schema="" catalog="cs4311team2sp16" type="TABLE">
+      <column name="id_Proposed_Project" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Submission_Type" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Workflow_Status" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Submission_Status" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="J1Byb3Bvc2VkJw=="/>
+      <column name="Creation_Date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="Amendment_Date" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="Project_Readiness_Elements" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="Project_Selection_Information" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="TPB_Approval" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12" def="J1BlbmRpbmcn"/>
+      <column name="State_Approval" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12" def="J1BlbmRpbmcn"/>
+      <column name="Federal_Approval" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12" def="J1BlbmRpbmcn"/>
+      <primary-key name="PRIMARY" columns="id_Proposed_Project"/>
+      <foreign-key name="Proposed_To_Project" columns="id_Proposed_Project" ref-table="Project" ref-schema="" ref-catalog="cs4311team2sp16" ref-columns="id_Project" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="Transit_Proposed_Project" schema="" catalog="cs4311team2sp16" type="TABLE">
+      <column name="id_TPP" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Appointment_Year" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="TDC_Amount_Requested" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Transit_Project_Type" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id_TPP"/>
+      <foreign-key name="TPP_To_Project" columns="id_TPP" ref-table="Project" ref-schema="" ref-catalog="cs4311team2sp16" ref-columns="id_Project" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="User" schema="" catalog="cs4311team2sp16" type="TABLE">
+      <column name="id_User" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="First_Name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Middel_Initial_Name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Last_Name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Organization_Id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Department_Name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Position_Title" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Department_Contact_Number" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Work_Contact_Number" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Username" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Password" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="User_Type_Id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id_User"/>
+      <foreign-key name="User_Type" columns="User_Type_Id" ref-table="User_Type" ref-schema="" ref-catalog="cs4311team2sp16" ref-columns="id" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="Organization_Relation" columns="Organization_Id" ref-table="Organization" ref-schema="" ref-catalog="cs4311team2sp16" ref-columns="Id_Organization" update-rule="0" delete-rule="0" deferrability="2"/>
+      <index name="idUser_UNIQUE" unique="true" columns="id_User"/>
+    </table>
+    <table name="UserTest" schema="" catalog="cs4311team2sp16" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Username" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Password" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="User_Type" schema="" catalog="cs4311team2sp16" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="User_Type" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="User_Type" unique="true" columns="User_Type"/>
+    </table>
+  </data-source>
+</component>
