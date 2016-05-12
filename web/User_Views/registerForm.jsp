@@ -48,6 +48,10 @@
         <input type="text" name="depName" maxlength="45">
         <br>
 
+        Department Contact Name:<br>
+        <input type="text" name="depContactName" maxlength="45">
+        <br>
+
         Position Title:<br>
         <input type="text" name="position" maxlength="45">
         <br>

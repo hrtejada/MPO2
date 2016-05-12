@@ -7,18 +7,22 @@
 --%>
 <%@ page import ="Models.User" %>
 <%
-    String fname = request.getParameter("firstname");
-    String mname = request.getParameter("middleinitial");
-    String lname = request.getParameter("lastname");
-    String org = request.getParameter("organization");
-    String dept = request.getParameter("depName");
-    String postitle = request.getParameter("position");
-    String deptnum = request.getParameter("depContactNum");
-    String worknum = request.getParameter("workContactNum");
+    String firstName = request.getParameter("firstname");
+    String middleName = request.getParameter("middleinitial");
+    String lastName = request.getParameter("lastname");
+    String organization = request.getParameter("organization");
+    String department = request.getParameter("depName");
+    String deptContactName = request.getParameter("depContactName");
+    String posTitle = request.getParameter("position");
+    String deptNum = request.getParameter("depContactNum");
+    String workNumber = request.getParameter("workContactNum");
     String email = request.getParameter("Email");
     String username = request.getParameter("Username");
     String password = request.getParameter("Password");
-    Boolean success = createUser(fname, mname, lname, org, dept, postitle, deptnum, worknum, email, username, password, "", false);
+
+    Boolean success = createUser(firstName, middleName, lastName, organization, department, posTitle, deptContactName, workNumber,
+            email, username, password, "", false);
+
     if (success) {
         response.sendRedirect("registrationSuccessful.jsp");
     } else {

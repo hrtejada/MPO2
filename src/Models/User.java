@@ -32,11 +32,11 @@ public class User {
                                   String departmentName, String positionTitle, String departmentContactName, String workContactName,
                                   String email, String username, String password, String userType, boolean isApproved)
         {
-            User newAccount = new User(firstName,middleInitial,lastName, organizationName,
+            User newUser = new User(firstName,middleInitial,lastName, organizationName,
                     departmentName,positionTitle,departmentContactName, workContactName,
                     email, username, password,userType, isApproved);
             UserManager db = new UserManager();
-            return db.createUser(newAccount);
+            return db.createUser(newUser);
         }
 
         public boolean deleteAccount(String username)
