@@ -17,7 +17,7 @@
     <meta name="author" content="BOSTT">
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <nav class="navbar navbar-default">
@@ -29,8 +29,9 @@
             <li role="presentation"><a href="#">Mangement</a></li>
             <li role="presentation"><a href="#">Administration</a></li>
             <li role="presentation"><a href="#">Finnancials</a></li>
-            <li class="navbar-right" role="presentation"><a href="#">Contact Us</a></li>
             <li class="navbar-right" role="presentation"><a href="#">Log In</a></li>
+            <li class="navbar-right" role="presentation"><a href="User_Views/registerForm.jsp">Register</a></li>
+            <li class="navbar-right" role="presentation"><a href="#">Contact Us</a></li>
         </ul>
     </div>
 </nav>
