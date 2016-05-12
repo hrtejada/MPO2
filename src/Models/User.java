@@ -28,9 +28,9 @@ public class User {
             userElements.put("isApproved", isApproved);
         }
 
-        public boolean createAccount(String firstName, char middleInitial,String lastName,String organizationName,
-                                     String departmentName, String positionTitle, String departmentContactName, String workContactName,
-                                     String email, String username, String password, String userType, boolean isApproved)
+        public boolean createUser(String firstName, char middleInitial, String lastName, String organizationName,
+                                  String departmentName, String positionTitle, String departmentContactName, String workContactName,
+                                  String email, String username, String password, String userType, boolean isApproved)
         {
             User newAccount = new User(firstName,middleInitial,lastName, organizationName,
                     departmentName,positionTitle,departmentContactName, workContactName,

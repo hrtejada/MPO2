@@ -15,22 +15,29 @@
 
     <body>
 
+    <div class="container-fluid">
     <%= "Hello From Java! Whoop whoop! "%>
 
     <%= new java.util.Date() %>
 
-    <form action="" method="post">
+    <div class="container">
+
+    <div class="panel-heading form-group" align="center">
+        <h2>Register as a new MPO User </h2>
+    </div>
+
+    <form action="register.jsp" class="SignUp" method="post" novalidate="novalidate">
         First Name:<br>
         <input type="text" name="firstname" maxlength="100"><br>
 
         Middle initial:<br>
-        <input type="text" name="middleinitail" maxlength="45"><br>
+        <input type="text" name="middleinitial" maxlength="45"><br>
 
         Last name:<br>
         <input type="text" name="lastname" maxlength="100"> <br>
 
         Organization Name:<br>
-        <select>
+        <select name="organization">
             <option value="startAgency">Start Agency</option>
             <option value="sponAgency">Sponsoring Agency</option>
             <option value="localAgency">Local Agency</option>
@@ -73,6 +80,9 @@
 
     </form>
 
+    </div>
+
+    </div>
 
     </body>
 </html>
