@@ -111,7 +111,8 @@ public class Project extends MPOObject {
             return db.createProject(newProject);
         }
 
-        public boolean createProject(String name,
+        public boolean updateProject(Long id,
+                                     String name,
                                      String limitFrom,
                                      String limitTo,
                                      String scopeofWork,
@@ -163,7 +164,7 @@ public class Project extends MPOObject {
                                             );
 
             ProjectManager db = new ProjectManager();
-            return db.updateProject(newProject);
+            return db.updateProject(newProject, id);
         }
 
         public boolean deleteProject(Long id) {
@@ -171,10 +172,6 @@ public class Project extends MPOObject {
             return db.deleteProject(id);
         }
 
-        public boolean updateProject() {
-            /*Code for Update goes here */
-            return false;
-        }
 
 
 }

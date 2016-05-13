@@ -58,7 +58,8 @@ public class ProposedProject extends MPOObject {
             return db.createProject(newProject);
         }
 
-        public boolean createProject(Long submissionType,
+        public boolean updateProject(Long id,
+                        Long submissionType,
                         String workflowStatus,
                         String submissionStatus,
                         Timestamp creationDate,
@@ -84,17 +85,12 @@ public class ProposedProject extends MPOObject {
                                             );
 
             ProposedProjectManager db = new ProposedProjectManager();
-            return db.updateProject(newProject);
+            return db.updateProject(newProject, id);
         }
 
         public boolean deleteProject(Long id) {
             ProposedProjectManager db = new ProposedProjectManager();
             return db.deleteProject(id);
-        }
-
-        public boolean updateProject() {
-            /*Code for Update goes here */
-            return false;
         }
 
 
