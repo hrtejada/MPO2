@@ -172,6 +172,4 @@ public class Project extends MPOObject {
             return db.deleteProject(id);
         }
 
-
-
 }
