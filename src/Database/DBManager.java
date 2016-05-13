@@ -46,7 +46,7 @@ public class DBManager {
         int i = 0;
         LinkedHashMap<String,Object> objectParams = mpoObject.getElements();
         for (String key : objectParams.keySet()) {
-                values+= key +"=" "\""+objectParams.get(key).toString()+"\"";
+                values+= key + "=" +objectParams.get(key).toString()+"\"";
 
             if(i < objectParams.size()-1)
             {

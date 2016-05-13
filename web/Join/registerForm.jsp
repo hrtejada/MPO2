@@ -130,5 +130,5 @@
 
     </div>
 
-    </body>
-</html>
+
+    <jsp:include page="../partials/header.jsp" />

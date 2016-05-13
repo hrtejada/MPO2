@@ -7,6 +7,8 @@ import java.util.LinkedHashMap;
 
 public class TransitProposedProject extends MPOObject {
 
+    LinkedHashMap <String, Object> elements = new LinkedHashMap <String, Object>();
+
         public TransitProposedProject (Long appointmentYear,
                                 Long tdcAmountRequested,
                                 String transitProjectType)

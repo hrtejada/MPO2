@@ -18,6 +18,13 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="/js/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="/js/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
 </head>
 
 <nav class="navbar navbar-default">
