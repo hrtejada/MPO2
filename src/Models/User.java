@@ -9,6 +9,10 @@ public class User {
 
         LinkedHashMap <String, Object> userElements = new LinkedHashMap <String, Object>();
 
+        public User(){
+
+        }
+
         public User (String firstName, char middleInitial,String lastName, String organizationName,
                         String departmentName, String positionTitle, String departmentContactName, String workContactName,
                         String email, String username, String password, String userType, boolean isApproved)
