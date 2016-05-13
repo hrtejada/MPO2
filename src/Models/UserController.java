@@ -26,7 +26,8 @@ public class UserController extends HttpServlet {
         String username = request.getParameter("Username");
         String password = request.getParameter("Password");
 
-        Boolean success = createUser(firstName, middleName, lastName, organization, department, posTitle, deptContactName, workNumber,
+        char middleInitial = middleName.charAt(0);
+        Boolean success = User.createUser(firstName, middleInitial, lastName, organization, department, posTitle, deptContactName, workNumber,
                 email, username, password, "", false);
 
         if (success) {

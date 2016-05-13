@@ -30,29 +30,27 @@ public class User {
 
         public boolean createUser(String firstName, char middleInitial, String lastName, String organizationName,
                                   String departmentName, String positionTitle, String departmentContactName, String workContactName,
-                                  String email, String username, String password, String userType, boolean isApproved)
-        {
+                                  String email, String username, String password, String userType, boolean isApproved) {
+
             User newUser = new User(firstName,middleInitial,lastName, organizationName,
                     departmentName,positionTitle,departmentContactName, workContactName,
                     email, username, password,userType, isApproved);
+
             UserManager db = new UserManager();
             return db.createUser(newUser);
         }
 
-        public boolean deleteAccount(String username)
-        {
+        public boolean deleteAccount(String username) {
             UserManager db = new UserManager();
             return db.deleteUser(username);
         }
 
-        public boolean updateAccount(String username, String field, String value)
-        {
+        public boolean updateAccount(String username, String field, String value) {
             /*Code for Update goes here */
             return false;
         }
 
-        public User verifyCredentials(String username, String password)
-        {
+        public User verifyCredentials(String username, String password) {
             UserManager db = new UserManager();
 
             if(db.verifyCredentials(username, password))

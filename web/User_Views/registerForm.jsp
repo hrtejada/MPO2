@@ -16,7 +16,6 @@
     <body>
 
     <div class="container-fluid">
-    <%= "Hello From Java! Whoop whoop! "%>
 
     <%= new java.util.Date() %>
 
@@ -26,61 +25,104 @@
         <h2>Register as a new MPO User </h2>
     </div>
 
-    <form action="register.jsp" class="SignUp" method="post" novalidate="novalidate">
-        First Name:<br>
-        <input type="text" name="firstname" maxlength="100"><br>
+    <form action="register.jsp" class="form-group" method="post" novalidate="novalidate">
+        <div class ="form-group">
 
-        Middle initial:<br>
-        <input type="text" name="middleinitial" maxlength="45"><br>
+            <div class="form-group">
+                <input
+                        type="text" class="form-control" name="firstName" id="firstname"
+                        placeholder="First Name:" required="required">
 
-        Last name:<br>
-        <input type="text" name="lastname" maxlength="100"> <br>
+            </div>
 
-        Organization Name:<br>
-        <select name="organization">
-            <option value="startAgency">Start Agency</option>
-            <option value="sponAgency">Sponsoring Agency</option>
-            <option value="localAgency">Local Agency</option>
-        </select>
-        <br>
+            <div class="form-group">
+                <input
+                        type="text" class="form-control" name="middleinitial" id="middleinitial"
+                        placeholder="Middle Name:" required="required">
 
-        Department Name:<br>
-        <input type="text" name="depName" maxlength="45">
-        <br>
+            </div>
 
-        Department Contact Name:<br>
-        <input type="text" name="depContactName" maxlength="45">
-        <br>
+            <div class="form-group">
+                <input
+                        type="text" class="form-control" name="lastname" id="lastname"
+                        placeholder="Last Name:" required="required">
 
-        Position Title:<br>
-        <input type="text" name="position" maxlength="45">
-        <br>
+            </div>
 
-        Department Contract number:<br>
-        <input type="text" name="depContactNum" maxlength="45">
-        <br>
+            <div class="form-group">
+                <select name="organization">
+                    <option value="startAgency">Start Agency</option>
+                    <option value="sponAgency">Sponsoring Agency</option>
+                    <option value="localAgency">Local Agency</option>
+                </select>
+            </div>
 
-        Work Contract Number:<br>
-        <input type="text" name="workContactNum" maxlength="45">
-        <br>
+            <div class="form-group">
+                <input
+                        type="text" class="form-control" name="depName" id="depName"
+                        placeholder="Department Name:" required="required">
 
-        Email:<br>
-        <input type="text" name="Email" maxlength="100">
-        <br>
+            </div>
 
-        User Name:<br>
-        <input type="text" name="Username" maxlength="45">
-        <br>
+            <div class="form-group">
+                <input
+                        type="text" class="form-control" name="depContactName" id="depContactName"
+                        placeholder="Department Contact Name:" required="required">
 
-        Password:<br>
-        <input type="text" name="Password" maxlength="45">
-        <br>
+            </div>
 
-        Re-enter Password:<br>
-        <input type="text" name="rePassword" maxlength="45">
-        <br>
-        <br>
-        <button type="button"> Register </button>
+            <div class="form-group">
+                <input
+                        type="text" class="form-control" name="position" id="position"
+                        placeholder="Position Title:" required="required">
+
+            </div>
+
+            <div class="form-group">
+                <input
+                        type="text" class="form-control" name="depContactNum" id="depContactNum"
+                        placeholder="Department Contact Number:" required="required">
+
+            </div>
+
+            <div class="form-group">
+                <input
+                        type="text" class="form-control" name="workContactNum" id="workContactNum"
+                        placeholder="Work Contact Number:" required="required">
+
+            </div>
+
+            <div class="form-group">
+                <input
+                        type="text" class="form-control" name="Email" id="Email"
+                        placeholder="Email:" required="required">
+
+            </div>
+
+            <div class="form-group">
+                <input
+                        type="text" class="form-control" name="Username" id="Username"
+                        placeholder="Username:" required="required">
+
+            </div>
+
+            <div class="form-group">
+                <input
+                        type="password" class="form-control" name="Password" id="Password"
+                        placeholder="Password:" required="required">
+
+            </div>
+
+            <div class="form-group">
+                <input
+                        type="password" class="form-control" name="rePassword" id="rePassword"
+                        placeholder="Re-enter Password:" required="required">
+
+            </div>
+
+            <button type="submit" class="btn"> Register </button>
+
+        </div>
 
     </form>
 
