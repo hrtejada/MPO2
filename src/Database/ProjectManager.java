@@ -29,7 +29,7 @@ public class ProjectManager extends DBManager {
         return this.deleteObject(table,condition);
     }
 
-    public boolean updateProject(Project project)
+    public boolean updateProject(Project project, Long id)
     {
         String table = "Project";
         String condition = "id_Project = "+id;
