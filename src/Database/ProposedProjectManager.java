@@ -49,17 +49,17 @@ public class ProposedProjectManager extends DBManager {
             resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
-              Long idProposedProject=resultSet.getInt("id_Proposed_Project",idProposedProject);
-              Long submissionType=resultSet.getInt("Submission_Type",submissionType);
-              String workflowStatus=resultSet.getString("Workflow_Status",workflowStatus);
-              String submissionStatus=resultSet.getString("Submission_Status",submissionStatus);
-              String creationDate=resultSet.getString("Creation_Date",creationDate);
-              String amendmentDate=resultSet.getString("Amendment_Date",amendmentDate);
-              String projectReadinessElements=resultSet.getString("Project_Readiness_elements",projectReadinesselements);
-              String projectSelectionInformation=resultSet.getString("Project_Selection_Information",projectSelectionInformation);
-              String tbpApproval=resultSet.getString("TBP_Approval",tbpApproval);
-              String stateApproval=resultSet.getString("State_Approval",stateApproval);
-              String federalApproval=resultSet.getString("Federal_Approval",federalApproval);
+              Long idProposedProject=resultSet.getInt("id_Proposed_Project");
+              Long submissionType=resultSet.getInt("Submission_Type");
+              String workflowStatus=resultSet.getString("Workflow_Status");
+              String submissionStatus=resultSet.getString("Submission_Status");
+              String creationDate=resultSet.getString("Creation_Date");
+              String amendmentDate=resultSet.getString("Amendment_Date");
+              String projectReadinessElements=resultSet.getString("Project_Readiness_elements");
+              String projectSelectionInformation=resultSet.getString("Project_Selection_Information");
+              String tbpApproval=resultSet.getString("TBP_Approval");
+              String stateApproval=resultSet.getString("State_Approval");
+              String federalApproval=resultSet.getString("Federal_Approval");
 
               ProposedProject newProject = new ProposedProject(submissionType,
                                               workflowStatus,
