@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  * Created by Beto on 5/13/16.
  */
-@WebServlet(name = "UserController")
+@WebServlet("/UserController")
 public class UserController extends HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         String firstName = request.getParameter("firstname");

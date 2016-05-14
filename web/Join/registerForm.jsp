@@ -25,7 +25,7 @@
         <h2>Register as a new MPO User </h2>
     </div>
 
-    <form action="../UserController" class="form-group" method="post" novalidate="novalidate">
+    <form action="/UserController" class="form-group" method="post" novalidate="novalidate">
         <div class ="form-group">
 
             <div class="form-group">

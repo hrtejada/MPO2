@@ -25,6 +25,7 @@ public class UserManager {
         String values ="";
         int i = 0;
         LinkedHashMap<String,Object> userParams = newUser.getUserElements();
+
         for (String key : userParams.keySet()) {
 
             if(key.equals("isApproved"))
