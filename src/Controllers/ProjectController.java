@@ -22,8 +22,8 @@ public class ProjectController extends HttpServlet {
         String limitFrom = request.getParameter("limitFrom");
         String limitTo = request.getParameter("limitTo");
         String scope = request.getParameter("scope");
-        String fiscalYear = request.getParameter("fiscalYear");
-        String networkYear = request.getParameter("networkYear");
+        Long fiscalYear = Long.parseLong(request.getParameter("fiscalYear"));
+        Long networkYear = Long.parseLong(request.getParameter("networkYear"));
         String county = request.getParameter("county");
         String city = request.getParameter("city");
         String area = request.getParameter("area");
@@ -34,7 +34,8 @@ public class ProjectController extends HttpServlet {
 
 
         Boolean success = Project.createProject(projectTitle,limitFrom,limitTo,
-                scope,"",projectType,(long)1,(long)1,"","","","","","",(long)1,(long)1,(long)1,"","","","","","");
+                scope,"",projectType,fiscalYear,networkYear,"DotDistrict",county,city,area,
+                "StateSystemRead","CapacityProject",(long)4,(long)8,(long)1000,"I-20","projectType","","","","");
 
         if (success) {
             System.out.println("Project form went through");

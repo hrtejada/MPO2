@@ -2,8 +2,7 @@
   <library name="JPA 2.0-2.0">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/javax.persistence.jar!/" />
-      <root url="jar:///usr/local/apache-tomcat-8.0.33/lib/servlet-api.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.38-bin.jar!/" />
+      <root url="jar:///usr/local/apache-tomcat-9.0.0.M4/lib/servlet-api.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

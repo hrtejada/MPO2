@@ -21,7 +21,7 @@ public class DBManager {
 
     public boolean createObject(String table, MPOObject mpoObject)
     {
-        String query = "Insert into "+ table +" values(";
+        String query = "Insert into "+ table +" values(NULL,";
         String values ="";
         int i = 0;
         LinkedHashMap<String,Object> objectParams = mpoObject.getElements();
@@ -69,14 +69,17 @@ public class DBManager {
     {
         int rowsAffected = -1;
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(db_name, db_username, db_password);
             PreparedStatement pstmt = conn.prepareStatement(query);
             rowsAffected = pstmt.executeUpdate(query);
             conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
-        if(rowsAffected==0)
+        if(rowsAffected<=0)
             return false;
         return true;
     }

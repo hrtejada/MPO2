@@ -7,8 +7,7 @@ import java.util.LinkedHashMap;
 
 public class Project extends MPOObject {
 
-        LinkedHashMap <String, Object> elements = new LinkedHashMap <String, Object>();
-        public Project (String name,
+         public Project (String name,
                      String limitFrom,
                      String limitTo,
                      String scopeofWork,

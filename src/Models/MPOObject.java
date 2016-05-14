@@ -7,7 +7,7 @@ import java.util.LinkedHashMap;
 
 public class  MPOObject {
 
-        private LinkedHashMap <String, Object> elements = new LinkedHashMap <String, Object>();
+        protected LinkedHashMap <String, Object> elements = new LinkedHashMap <String, Object>();
 
         public LinkedHashMap<String, Object> getElements() {
             return elements;
