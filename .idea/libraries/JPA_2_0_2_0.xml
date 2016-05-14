@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/javax.persistence.jar!/" />
       <root url="jar:///usr/local/apache-tomcat-8.0.33/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.38-bin.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

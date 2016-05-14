@@ -26,6 +26,7 @@ public class UserManager {
         int i = 0;
         LinkedHashMap<String,Object> userParams = newUser.getUserElements();
 
+        System.out.println(userParams.keySet());
         for (String key : userParams.keySet()) {
 
             if(key.equals("isApproved"))
@@ -35,6 +36,7 @@ public class UserManager {
             }
             else
             {
+                System.out.println(userParams.get("firstName"));
                 values+= "\""+userParams.get(key).toString()+"\"";
             }
             if(i < userParams.size()-1)
@@ -134,11 +136,14 @@ public class UserManager {
     {
         int rowsAffected = -1;
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(db_name, db_username, db_password);
             PreparedStatement pstmt = conn.prepareStatement(query);
             rowsAffected = pstmt.executeUpdate(query);
             conn.close();
         } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         if(rowsAffected==0)

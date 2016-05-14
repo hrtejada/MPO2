@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"                                                    "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -22,14 +22,15 @@
 <td>CITY</td>
 <td>AREA</td>
 </tr>
+    <%@ page import="java.sql.*" %>
 <%
 try
 {
 Class.forName("com.mysql.jdbc.Driver");
-String url="jdbc:mysql://localhost/test";
-String username="root";
-String password="root";
-String query="select * from jsp1";
+String url="jdbc:mysql://earth.cs.utep.edu/cs4311team2sp16";
+String username="cs4311team2sp16";
+String password="bostt";
+String query="select * from Project";
 Connection conn=DriverManager.getConnection(url,username,password);
 Statement stmt=conn.createStatement();
 ResultSet rs=stmt.executeQuery(query);

@@ -14,28 +14,30 @@ import java.io.IOException;
 @WebServlet("/UserController")
 public class UserController extends HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        String firstName = request.getParameter("firstname");
+        String firstName = request.getParameter("firstName");
         String middleName = request.getParameter("middleinitial");
         String lastName = request.getParameter("lastname");
         String organization = request.getParameter("organization");
         String department = request.getParameter("depName");
         String deptContactName = request.getParameter("depContactName");
         String posTitle = request.getParameter("position");
-        String deptNum = request.getParameter("depContactNum");
+        //String deptNum = request.getParameter("depContactNum");
         String workNumber = request.getParameter("workContactNum");
         String email = request.getParameter("Email");
         String username = request.getParameter("Username");
         String password = request.getParameter("Password");
 
         char middleInitial = middleName.charAt(0);
-        User newUser = new User();
 
-        Boolean success = newUser.createUser(firstName, middleInitial, lastName, organization, department, posTitle, deptContactName, workNumber,
-                email, username, password, "", false);
+
+        User newUser = new User(firstName, middleInitial, lastName, organization, department, posTitle, deptContactName, workNumber,
+                email, username, password, "", true);
+
+        Boolean success = newUser.createUser(newUser);
 
         if (success) {
             System.out.println("Register form went through");
-            response.sendRedirect("SuccessReg.jsp");
+            response.sendRedirect("Join/SuccessReg.jsp");
         } else {
             response.sendRedirect("index.jsp");
         }

@@ -30,18 +30,16 @@ public class User {
             userElements.put("password", password);
             userElements.put("userType", userType);
             userElements.put("isApproved", isApproved);
+
+            System.out.println(userElements.get("firstName"));
+            System.out.println(userElements.get("lastName"));
         }
 
-        public boolean createUser(String firstName, char middleInitial, String lastName, String organizationName,
-                                  String departmentName, String positionTitle, String departmentContactName, String workContactName,
-                                  String email, String username, String password, String userType, boolean isApproved) {
-
-            User newUser = new User(firstName,middleInitial,lastName, organizationName,
-                    departmentName,positionTitle,departmentContactName, workContactName,
-                    email, username, password,userType, isApproved);
+        public boolean createUser(User newUser) {
 
             UserManager db = new UserManager();
             return db.createUser(newUser);
+
         }
 
         public boolean deleteAccount(String username) {
@@ -68,6 +66,7 @@ public class User {
         public LinkedHashMap<String, Object> getUserElements() {
             return userElements;
         }
+
 
         public void setAccountElements(LinkedHashMap<String, Object> accountElements) {
             this.userElements = accountElements;
