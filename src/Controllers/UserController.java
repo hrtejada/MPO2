@@ -21,7 +21,6 @@ public class UserController extends HttpServlet {
         String department = request.getParameter("depName");
         String deptContactName = request.getParameter("depContactName");
         String posTitle = request.getParameter("position");
-        //String deptNum = request.getParameter("depContactNum");
         String workNumber = request.getParameter("workContactNum");
         String email = request.getParameter("Email");
         String username = request.getParameter("Username");

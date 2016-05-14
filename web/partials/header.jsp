@@ -19,6 +19,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/Custom.css" rel="stylesheet">
+
     <!-- DataTables CSS -->
     <link href="/js/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
@@ -31,14 +34,18 @@
     <div class="collapse navbar-collapse">
         <ul class="nav nav-pills">
             <li role="presentation" class="active"><a href="/index.jsp">Home</a></li>
-            <li role="presentation"><a href="Project/projectCreationForm.jsp">Projects</a></li>
+            <li role="presentation"><a href="/Project/projectCreationForm.jsp">Projects</a></li>
             <li role="presentation"><a href="#">Reports</a></li>
             <li role="presentation"><a href="#">Mangement</a></li>
             <li role="presentation"><a href="#">Administration</a></li>
-            <li role="presentation"><a href="#">Finnancials</a></li>
+            <li role="presentation"><a href="#">Financials</a></li>
             <li class="navbar-right" role="presentation"><a href="/Login/Login.jsp">Log In</a></li>
             <li class="navbar-right" role="presentation"><a href="/Join/registerForm.jsp">Register</a></li>
             <li class="navbar-right" role="presentation"><a href="#">Contact Us</a></li>
         </ul>
     </div>
 </nav>
+
+<body>
+
+<div id="wrapper">

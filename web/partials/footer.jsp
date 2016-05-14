@@ -5,11 +5,14 @@
   Time: 1:21 AM
   To change this template use File | Settings | File Templates.
 --%>
+
 <footer class="footer">
     <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+        <p class="text-muted">PROMASYS</p>
+        <p class="text-muted">BOST</p>
     </div>
 </footer>
+
 
 <!-- jQuery -->
 <script src="/js/jquery/dist/jquery.min.js"></script>
@@ -23,6 +26,7 @@
 <script src="/js/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 <script src="/js/datatables-responsive/js/dataTables.responsive.js"></script>
 
+</div>
 
 
 </body>
