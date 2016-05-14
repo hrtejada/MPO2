@@ -2,7 +2,7 @@
 <html>
 <jsp:include page="../partials/header.jsp" />
 <body>
-<form>
+<form action="/ProjectController" class="form-group" method="post" novalidate="novalidate">
 	<h1>Project Creation</h1>
 	<p>What kind of project would you be creating?</p>
 
@@ -29,6 +29,6 @@
 	<input type="text" name="projectCost" placeholder="Total Project Cost"><br>
 	<input type="text" name="sponsor" placeholder="Sponsor"><br>
 	<input type="text" name="yoe" placeholder="Year of Expenditure"><br>
-</form>
 
-<jsp:include page="../partials/header.jsp" />
+	<button type="submit" class="btn"> Submit </button>
+</form>
