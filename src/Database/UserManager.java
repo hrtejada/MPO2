@@ -21,7 +21,7 @@ public class UserManager {
     //User queries
     public boolean createUser(User newUser)
     {
-        String query = "Insert into users values(";
+        String query = "Insert into User values(";
         String values ="";
         int i = 0;
         LinkedHashMap<String,Object> userParams = newUser.getUserElements();
@@ -52,13 +52,13 @@ public class UserManager {
 
     public boolean deleteUser(String email)
     {
-        String query = "Delete from users where username=\""+email+"\"";
+        String query = "Delete from User where Username=\""+email+"\"";
         return checkAffectedRows(query);
     }
 
     public boolean verifyCredentials(String username, String password)
     {
-        String query = "Select password from users where username=\""+username+"\"";
+        String query = "Select Password from User where Username=\""+username+"\"";
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;
@@ -85,7 +85,7 @@ public class UserManager {
 
     public User getUser(String username)
     {
-        String query = "Select * from users where username=\""+username+"\"";
+        String query = "Select * from User where Username=\""+username+"\"";
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
