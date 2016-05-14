@@ -19,6 +19,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/Custom.css" rel="stylesheet">
+
     <!-- DataTables CSS -->
     <link href="/js/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
@@ -42,3 +45,7 @@
         </ul>
     </div>
 </nav>
+
+<body>
+
+<div id="wrapper">

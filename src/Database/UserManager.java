@@ -21,12 +21,12 @@ public class UserManager {
     //User queries
     public boolean createUser(User newUser)
     {
-        String query = "Insert into User values(";
+        String query = "Insert into User values(NULL, ";
         String values ="";
         int i = 0;
         LinkedHashMap<String,Object> userParams = newUser.getUserElements();
 
-        System.out.println(userParams.keySet());
+        //System.out.println(userParams.keySet());
         for (String key : userParams.keySet()) {
 
             if(key.equals("isApproved"))
@@ -36,7 +36,7 @@ public class UserManager {
             }
             else
             {
-                System.out.println(userParams.get("firstName"));
+                //System.out.println(userParams.get("firstName"));
                 values+= "\""+userParams.get(key).toString()+"\"";
             }
             if(i < userParams.size()-1)
@@ -58,11 +58,12 @@ public class UserManager {
 
     public boolean verifyCredentials(String username, String password)
     {
+        Boolean result = false;
         String query = "Select Password from User where Username=\""+username+"\"";
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;
-        String passwordRetrieved = "";
+        String passwordRetrieved ="";
         try {
             conn = DriverManager.getConnection(db_name, db_username, db_password);
             stmt = conn.createStatement();
@@ -71,20 +72,23 @@ public class UserManager {
             while(rs.next())
             {
                 passwordRetrieved = rs.getString("password");
-                //System.out.println("password: "+passwordRetrieved);
             }
             conn.close();
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
-        if(passwordRetrieved.equals(password))
-            return true;
-        return false;
+        if(passwordRetrieved.equals(password)) {
+            result = true;
+            return result;
+        }
+
+        return result;
     }
 
     public User getUser(String username)
     {
+
         String query = "Select * from User where Username=\""+username+"\"";
         Connection connection = null;
         PreparedStatement statement = null;
@@ -120,13 +124,18 @@ public class UserManager {
 
             }
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         finally {
-            if (resultSet != null) try { resultSet.close(); } catch (SQLException ignore) {}
-            if (statement != null) try { statement.close(); } catch (SQLException ignore) {}
-            if (connection != null) try { connection.close(); } catch (SQLException ignore) {}
+            if (resultSet != null)
+                try { resultSet.close(); }
+                catch (SQLException ignore) {}
+            if (statement != null)
+                try { statement.close(); }
+                catch (SQLException ignore) {}
+            if (connection != null)
+                try { connection.close(); }
+                catch (SQLException ignore) {}
         }
 
         return null;
@@ -137,10 +146,10 @@ public class UserManager {
         int rowsAffected = -1;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(db_name, db_username, db_password);
-            PreparedStatement pstmt = conn.prepareStatement(query);
-            rowsAffected = pstmt.executeUpdate(query);
-            conn.close();
+            Connection connection = DriverManager.getConnection(db_name, db_username, db_password);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            rowsAffected = preparedStatement.executeUpdate(query);
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

@@ -8,8 +8,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <jsp:include page="partials/header.jsp" />
-  <body>
-  <h1> <%= "MPO PROJECT MANAGEMENT SYSTEM | PROMASYS"%> </h1>
+
+
+  <div class="container">
+    <div class="page-header">
+      <h1> <%= "MPO PROJECT MANAGEMENT SYSTEM | PROMASYS"%> </h1>
+    </div>
+    <p class="lead">Welcome to the MPO Project Management System. PROMASYS.</p>
+
+  </div>
 
 
   <jsp:include page="/partials/footer.jsp" />
