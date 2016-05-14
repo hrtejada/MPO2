@@ -1,17 +1,23 @@
 package Models;
 import Database.ProposedProjectManager;
+import java.util.Date;
 import java.util.LinkedHashMap;
+import java.sql.Timestamp;
 /**
  * Created by Beto on 5/11/16.
  */
 
 public class ProposedProject extends MPOObject {
 
+    LinkedHashMap <String, Object> elements = new LinkedHashMap <String, Object>();
+    Date date = new Date();
+    Timestamp time = new Timestamp(date.getTime());
+
         public ProposedProject (Long submissionType,
                         String workflowStatus,
                         String submissionStatus,
-                        Timestamp creationDate,
-                        Timestamp amendmentDate,
+                        Long creationDate,
+                        Long amendmentDate,
                         String projectReadinessElements,
                         String projectSelectionInformation,
                         String tbpApproval,
@@ -23,7 +29,7 @@ public class ProposedProject extends MPOObject {
           this.elements.put("Submission_Status",submissionStatus);
           this.elements.put("Creation_Date",creationDate);
           this.elements.put("Amendment_Date",amendmentDate);
-          this.elements.put("Project_Readiness_elements",projectReadinesselements);
+          this.elements.put("Project_Readiness_elements", projectReadinessElements);
           this.elements.put("Project_Selection_Information",projectSelectionInformation);
           this.elements.put("TBP_Approval",tbpApproval);
           this.elements.put("State_Approval",stateApproval);
@@ -33,14 +39,13 @@ public class ProposedProject extends MPOObject {
         public boolean createProject(Long submissionType,
                         String workflowStatus,
                         String submissionStatus,
-                        Timestamp creationDate,
-                        Timestamp amendmentDate,
+                        Long creationDate,
+                        Long amendmentDate,
                         String projectReadinessElements,
                         String projectSelectionInformation,
                         String tbpApproval,
                         String stateApproval,
-                        String federalApproval)
-        {
+                        String federalApproval){
 
             ProposedProject newProject = new ProposedProject(submissionType,
                                             workflowStatus,
@@ -62,8 +67,8 @@ public class ProposedProject extends MPOObject {
                         Long submissionType,
                         String workflowStatus,
                         String submissionStatus,
-                        Timestamp creationDate,
-                        Timestamp amendmentDate,
+                        Long creationDate,
+                        Long amendmentDate,
                         String projectReadinessElements,
                         String projectSelectionInformation,
                         String tbpApproval,

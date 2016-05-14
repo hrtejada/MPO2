@@ -34,13 +34,14 @@ public class TransitProposedProject extends MPOObject {
         }
 
         public boolean updateProject(Long id,
-                                Long tdcAmountRequested,
-                                String transitProjectType
+                                     Long appointmentYear,
+                                    Long tdcAmountRequested,
+                                    String transitProjectType
                                      )
         {
 
             TransitProposedProject newProject = new TransitProposedProject(
-                                ppointmentYear,
+                                appointmentYear,
                                 tdcAmountRequested,
                                 transitProjectType
                                             );

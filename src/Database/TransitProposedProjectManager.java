@@ -49,17 +49,15 @@ public class TransitProposedProjectManager extends DBManager {
             resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
-              Long idTPP=resultSet.getInt("id_TPP");
-              Long appointmentYear=resultSet.getInt("Appointment_Year");
-              String tcdAmountRequested=resultSet.getString("TCD_Amount_Requested");
+              Long idTPP = resultSet.getLong("id_TPP");
+              Long appointmentYear=resultSet.getLong("Appointment_Year");
+              Long tdcAmountRequested =resultSet.getLong("TCD_Amount_Requested");
               String transitProjectType=resultSet.getString("Transit_Project_Type");
 
-              TransitProposedProject newProject = new TransitProposedProject(submissionType,
-                                      appointmentYear,
+              TransitProposedProject newProject = new TransitProposedProject(appointmentYear,
                                       tdcAmountRequested,
                                       transitProjectType
                                               );
-
                 return newProject;
             }
         } catch (SQLException e) {

@@ -49,29 +49,29 @@ public class ProjectManager extends DBManager {
             resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
-              String name=resultSet.getString("name");
-              String limitFrom=resultSet.getString("limitFrom");
-              String limitTo=resultSet.getString("limitTo");
-              String scopeofWork=resultSet.getString("scopeofWork");
-              String remarks=resultSet.getString("remarks");
-              String fundedProjectType=resultSet.getString("fundedProjectType");
-              Long federalFiscalYear=resultSet.getInt("federalFiscalYear");
-              Long networkYear=resultSet.getInt("networkYear");
-              String dotDistrict=resultSet.getString("dotDistrict");
-              String county=resultSet.getString("county");
-              String city=resultSet.getString("city");
-              String area=resultSet.getString("area");
-              String stateSystemRoad=resultSet.getString("stateSystemRoad");
-              String capacityProject=resultSet.getString("capacityProject");
-              Long numberofExistingLanes=resultSet.getInt("numberofExistingLanes");
-              Long numberofProjectedLanes=resultSet.getInt("numberofProjectedLanes");
-              Long numberofMiles=resultSet.getInt("numberofMiles");
-              String highwayName=resultSet.getString("highwayName");
-              String projectType=resultSet.getString("projectType");
-              String transitInformation=resultSet.getString("transitInformation");
-              String airVOCAnalysisVOC=resultSet.getString("airVOCAnalysisVOC");
-              String airVOCAnalysisNOC=resultSet.getString("airVOCAnalysisNOC");
-              String airVOCAnalysisCO=resultSet.getString("airVOCAnalysisCO");
+              String name = resultSet.getString("name");
+              String limitFrom = resultSet.getString("limitFrom");
+              String limitTo = resultSet.getString("limitTo");
+              String scopeofWork = resultSet.getString("scopeofWork");
+              String remarks = resultSet.getString("remarks");
+              String fundedProjectType = resultSet.getString("fundedProjectType");
+              Long federalFiscalYear = resultSet.getLong("federalFiscalYear");
+              Long networkYear = resultSet.getLong("networkYear");
+              String dotDistrict = resultSet.getString("dotDistrict");
+              String county = resultSet.getString("county");
+              String city = resultSet.getString("city");
+              String area = resultSet.getString("area");
+              String stateSystemRoad = resultSet.getString("stateSystemRoad");
+              String capacityProject = resultSet.getString("capacityProject");
+              Long numberofExistingLanes = resultSet.getLong("numberofExistingLanes");
+              Long numberofProjectedLanes = resultSet.getLong("numberofProjectedLanes");
+              Long numberofMiles = resultSet.getLong("numberofMiles");
+              String highwayName = resultSet.getString("highwayName");
+              String projectType = resultSet.getString("projectType");
+              String transitInformation = resultSet.getString("transitInformation");
+              String airVOCAnalysisVOC = resultSet.getString("airVOCAnalysisVOC");
+              String airVOCAnalysisNOC = resultSet.getString("airVOCAnalysisNOC");
+              String airVOCAnalysisCO = resultSet.getString("airVOCAnalysisCO");
 
               Project newProject = new Project(name,
                                               limitFrom,
