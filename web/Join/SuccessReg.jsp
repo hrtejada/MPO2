@@ -12,8 +12,9 @@
 
 <body>
 
+
 <h2>Registration is Successful.</h2>
 Please Login Here: <a href='index.jsp'>Go to Login</a>
 
 
-<jsp:include page="../partials/header.jsp" />
+<jsp:include page="../partials/footer.jsp" />

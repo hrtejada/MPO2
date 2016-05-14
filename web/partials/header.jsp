@@ -30,14 +30,14 @@
 <nav class="navbar navbar-default">
     <div class="collapse navbar-collapse">
         <ul class="nav nav-pills">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation" class="active"><a href="index.jsp">Home</a></li>
             <li role="presentation"><a href="#">Projects</a></li>
             <li role="presentation"><a href="#">Reports</a></li>
             <li role="presentation"><a href="#">Mangement</a></li>
             <li role="presentation"><a href="#">Administration</a></li>
             <li role="presentation"><a href="#">Finnancials</a></li>
-            <li class="navbar-right" role="presentation"><a href="#">Log In</a></li>
-            <li class="navbar-right" role="presentation"><a href="User_Views/registerForm.jsp">Register</a></li>
+            <li class="navbar-right" role="presentation"><a href="Login/Login.jsp">Log In</a></li>
+            <li class="navbar-right" role="presentation"><a href="Join/registerForm.jsp">Register</a></li>
             <li class="navbar-right" role="presentation"><a href="#">Contact Us</a></li>
         </ul>
     </div>

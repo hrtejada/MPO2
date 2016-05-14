@@ -1,5 +1,4 @@
 package Controllers;
-
 import Models.User;
 
 import javax.servlet.ServletException;
@@ -10,11 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by Beto on 5/12/16.
+ * Created by Beto on 5/13/16.
  */
-@WebServlet("UserController")
+@WebServlet(name = "UserController")
 public class UserController extends HttpServlet {
-
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         String firstName = request.getParameter("firstname");
         String middleName = request.getParameter("middleinitial");

@@ -9,6 +9,7 @@
 <html>
   <jsp:include page="partials/header.jsp" />
   <body>
-  <%= "Hello From Java! Whoop whoop! "%>
-  </body>
-</html>
+  <h1> <%= "MPO PROJECT MANAGEMENT SYSTEM | PROMASYS"%> </h1>
+
+
+  <jsp:include page="/partials/footer.jsp" />
