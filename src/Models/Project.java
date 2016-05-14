@@ -2,7 +2,7 @@ package Models;
 import Database.ProjectManager;
 import java.util.LinkedHashMap;
 /**
- * Created by Beto on 5/11/16.
+ * Created by Carolina on 5/11/16.
  */
 
 public class Project extends MPOObject {
@@ -57,7 +57,7 @@ public class Project extends MPOObject {
             this.elements.put("Air_VOC_Analysis_CO",airVOCAnalysisCO);
         }
 
-        public boolean createProject(String name,
+        public static boolean createProject(String name,
                                      String limitFrom,
                                      String limitTo,
                                      String scopeofWork,

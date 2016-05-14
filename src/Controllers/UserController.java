@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 @WebServlet("/UserController")
 public class UserController extends HttpServlet {
-    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String firstName = request.getParameter("firstname");
         String middleName = request.getParameter("middleinitial");
         String lastName = request.getParameter("lastname");
@@ -42,7 +42,7 @@ public class UserController extends HttpServlet {
     }
 
 
-    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 }

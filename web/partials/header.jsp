@@ -31,7 +31,7 @@
     <div class="collapse navbar-collapse">
         <ul class="nav nav-pills">
             <li role="presentation" class="active"><a href="/index.jsp">Home</a></li>
-            <li role="presentation"><a href="#">Projects</a></li>
+            <li role="presentation"><a href="Project/projectCreationForm.jsp">Projects</a></li>
             <li role="presentation"><a href="#">Reports</a></li>
             <li role="presentation"><a href="#">Mangement</a></li>
             <li role="presentation"><a href="#">Administration</a></li>
